@@ -3,15 +3,12 @@ FROM python:3.11-slim
 # Установим uv
 RUN pip install uv
 
-# Копируем зависимости
-COPY requirements.txt .
-
-# Устанавливаем зависимости
-RUN uv pip install --no-cache-dir -r requirements.txt
-
 # Копируем проект
 COPY . /app
 WORKDIR /app
+
+# Устанавливаем зависимости через uv
+RUN uv pip install --no-cache-dir -r requirements.txt
 
 # Открываем порт и запускаем Streamlit
 EXPOSE 8501
