@@ -7,8 +7,11 @@ RUN pip install uv
 COPY . /app
 WORKDIR /app
 
-# Устанавливаем зависимости через uv
-RUN uv pip install --no-cache-dir -r requirements.txt
+# Создаем виртуальную среду с uv
+RUN uv venv venv
+
+# Активируем виртуальную среду и устанавливаем зависимости
+RUN . venv/bin/activate && uv pip install --no-cache-dir -r requirements.txt
 
 # Открываем порт и запускаем Streamlit
 EXPOSE 8501
