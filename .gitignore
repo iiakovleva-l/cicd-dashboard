@@ -43,9 +43,6 @@ pip-delete-this-directory.txt
 # macOS Spotlight
 .Spotlight-V100
 
-# GitHub CLI auth
-.github/
-
 # Logs
 *.log
 
