@@ -1,0 +1,50 @@
+[
+  {
+    "run_id": 1001,
+    "repository": "team-a/app1",
+    "workflow": "build.yml",
+    "branch": "main",
+    "trigger": "push",
+    "status": "success",
+    "build_tool": "maven",
+    "caller_lz": "lz-001",
+    "called_reusable_workflow": true,
+    "timestamp": "2025-04-01T10:00:00Z"
+  },
+  {
+    "run_id": 1002,
+    "repository": "team-a/app2",
+    "workflow": "build.yml",
+    "branch": "dev",
+    "trigger": "workflow_call",
+    "status": "failure",
+    "build_tool": "gradle",
+    "caller_lz": "lz-002",
+    "called_reusable_workflow": true,
+    "timestamp": "2025-04-01T12:00:00Z"
+  },
+  {
+    "run_id": 1003,
+    "repository": "team-b/api",
+    "workflow": "build.yml",
+    "branch": "main",
+    "trigger": "push",
+    "status": "success",
+    "build_tool": "npm",
+    "caller_lz": "lz-001",
+    "called_reusable_workflow": false,
+    "timestamp": "2025-04-01T13:00:00Z"
+  },
+  {
+    "run_id": 1004,
+    "repository": "team-c/service",
+    "workflow": "build.yml",
+    "branch": "release",
+    "trigger": "workflow_call",
+    "status": "success",
+    "build_tool": "python",
+    "caller_lz": "lz-003",
+    "called_reusable_workflow": true,
+    "timestamp": "2025-04-02T09:00:00Z"
+  }
+]

@@ -1,0 +1,62 @@
+# macOS system files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv/
+.python-version
+
+# pip
+pip-log.txt
+pip-delete-this-directory.txt
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Streamlit cache
+.streamlit/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# VS Code
+.vscode/
+
+# macOS trash folder
+.Trashes
+
+# macOS Spotlight
+.Spotlight-V100
+
+# GitHub CLI auth
+.github/
+
+# Logs
+*.log
+
+# IDEs
+.idea/
+*.iml
+
+# Coverage and test outputs
+.coverage
+htmlcov/
+.tox/
+.nox/
+.cache/
+.pytest_cache/
