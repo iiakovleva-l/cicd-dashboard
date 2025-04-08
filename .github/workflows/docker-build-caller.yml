@@ -14,4 +14,6 @@ jobs:
       image_tags: |
         ghcr.io/iiakovleva-l/ghactionsdashboard:latest
         ghcr.io/iiakovleva-l/ghactionsdashboard:${{ github.sha }}
+      registry: ghcr.io
       push: true
+    secrets: inherit
