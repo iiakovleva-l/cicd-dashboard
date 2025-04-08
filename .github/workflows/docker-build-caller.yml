@@ -11,9 +11,7 @@ jobs:
     with:
       dockerfile: Dockerfile
       context: .
-      image_tags: |
-        ghcr.io/iiakovleva-l/ghactionsdashboard:latest
-        ghcr.io/iiakovleva-l/ghactionsdashboard:${{ github.sha }}
+      image_tags: ghcr.io/${{ github.repository }}:latest
       registry: ghcr.io
       push: true
     secrets: inherit
