@@ -1,4 +1,4 @@
-name: Call Docker Build
+name: Call Main Build
 
 on:
   push:
@@ -8,11 +8,7 @@ on:
 jobs:
   docker-build:
     permissions: write-all
-    uses: iiakovleva-l/ci-cd-workflows/.github/workflows/build-docker.yml@main
+    uses: iiakovleva-l/ci-cd-workflows/.github/workflows/main-build.yml@main
     with:
-      dockerfile: Dockerfile
-      context: .
-      image_tags: ghcr.io/${{ github.repository }}:latest
-      registry: ghcr.io
-      push: true
+      build-type: docker
     secrets: inherit
